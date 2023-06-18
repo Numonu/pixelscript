@@ -1,5 +1,6 @@
 ---
 import HeaderStats from "../components/HeaderStats.astro";
+import WallpaperCard from "../components/WallpaperCard.astro";
 ---
 <style>
     .button-light:hover {
@@ -9,8 +10,8 @@ import HeaderStats from "../components/HeaderStats.astro";
             0 0 10px var(--color), 0 0 25px var(--color);
     }
 </style>
-<section class="grid grid-cols-1">
-    <div class="py-12">
+<section class="grid grid-cols-1 lg:grid-cols-2">
+    <div class="py-12 lg:py-28">
         <div class="mb-12">
             <h1 class="text-5xl mb-2">
                 Extraordinary rare <br class="hidden md:block"/> digital wallpaper
@@ -26,5 +27,8 @@ import HeaderStats from "../components/HeaderStats.astro";
             </button>
         </div>
         <HeaderStats/>
+    </div>
+    <div class="flex items-center">
+        <WallpaperCard/>
     </div>
 </section>
