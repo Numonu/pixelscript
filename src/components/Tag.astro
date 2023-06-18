@@ -1,0 +1,20 @@
+---
+export const enum Names {
+    HTML = "html",
+    CSS = "css",
+    JS = "javascript"
+}
+interface Props{name : Names}
+const {name} = Astro.props;
+//
+let style = "";
+switch(name){
+    case Names.HTML:style = "text-orange-500 border-orange-500";break;
+    case Names.CSS:style = "text-blue-500 border-blue-500";break;
+    case Names.JS:style = "text-yellow-500 border-yellow-500";break;
+    default:style = "text-neutral-50 border-neutral-50";
+}
+---
+<div class={`w-max px-4 py-1 capitalize border-2 rounded-full ${style}`}>
+    {name}
+</div>
