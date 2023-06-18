@@ -1,0 +1,29 @@
+---
+import Download from "./Download.astro";
+import Tag from "./Tag.astro";
+import { Names } from "./Tag.astro";
+---
+
+<article class="relative max-w-[450px] mx-auto">
+    <div class="bg-gradient-to-t from-[#4158D0] via-[#C850C0] to-yellow-400 absolute inset-0 blur-md -z-10"></div>
+    <div class="rounded-lg overflow-hidden">
+        <div class="aspect-[16/8]">
+            <img
+                class="w-full h-full object-cover"
+                src="https://cdn.pixabay.com/photo/2020/01/14/02/09/vapor-4763904_640.jpg"
+                alt="name_here"
+            />
+        </div>
+        <div class="bg-zinc-900 p-4">
+            <h3 class="text-2xl font-light mb-4">Neon Wallpaper</h3>
+            <div class="flex flex-wrap gap-4 mb-6">
+                <Tag name={Names.HTML} />
+                <Tag name={Names.CSS} />
+                <Tag name={Names.JS} />
+            </div>
+            <div class="flex justify-end">
+                <Download />
+            </div>
+        </div>
+    </div>
+</article>
