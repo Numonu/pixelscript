@@ -3,9 +3,18 @@ import Download from "./Download.astro";
 import Tag from "./Tag.astro";
 import { Names } from "./Tag.astro";
 ---
-
+<style>
+    .animation{
+        animation: animation 4s linear infinite;
+    }
+    @keyframes animation {
+        to{
+            rotate: 360deg;
+        }
+    }
+</style>
 <article class="relative max-w-[450px] mx-auto">
-    <div class="bg-gradient-to-t from-[#4158D0] via-[#C850C0] to-yellow-400 absolute inset-0 blur-md -z-10"></div>
+    <div class="hidden bg-gradient-to-t animation from-indigo-500 via-pink-500 to-yellow-400 absolute inset-0 blur-xl -z-10 lg:block"></div>
     <div class="rounded-lg overflow-hidden">
         <div class="aspect-[16/8]">
             <img
