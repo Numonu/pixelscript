@@ -1,3 +1,6 @@
+---
+import HeaderStats from "../components/HeaderStats.astro";
+---
 <style>
     .button-light:hover {
         --color: rgb(132, 204, 22);
@@ -8,7 +11,7 @@
 </style>
 <section class="grid grid-cols-1">
     <div class="py-12">
-        <div>
+        <div class="mb-12">
             <h1 class="text-5xl mb-2">
                 Extraordinary rare <br class="hidden md:block"/> digital wallpaper
             </h1>
@@ -22,6 +25,6 @@
                 <i class="fa-solid fa-chevron-down"></i>
             </button>
         </div>
-        <div></div>
+        <HeaderStats/>
     </div>
 </section>
