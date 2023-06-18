@@ -1,3 +1,7 @@
+---
+import HeaderLink from "../components/HeaderLink.astro";
+---
+
 <header class="py-4 flex justify-between items-center">
     <div
         class="border-neutral-50 grid place-items-center w-12 aspect-square rounded-lg border-2 cursor-pointer hover:bg-neutral-50 hover:text-neutral-900 transition-colors"
@@ -5,26 +9,14 @@
         <i class="fa-solid fa-memory text-2xl"></i>
     </div>
     <ul class="flex justify-between items-center gap-4 text-lg">
-        <li
-            class="border-neutral-50 grid place-items-center w-10 aspect-square rounded-full border-2 cursor-pointer hover:bg-neutral-50 hover:text-neutral-900 transition-colors"
-        >
-            <a href="#">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-        </li>
-        <li
-            class="border-neutral-50 grid place-items-center w-10 aspect-square rounded-full border-2 cursor-pointer hover:bg-neutral-50 hover:text-neutral-900 transition-colors"
-        >
-            <a href="#">
-                <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-        </li>
-        <li
-            class="border-neutral-50 grid place-items-center w-10 aspect-square rounded-full border-2 cursor-pointer hover:bg-neutral-50 hover:text-neutral-900 transition-colors"
-        >
-            <a href="#">
-                <i class="fa-solid fa-sun"></i>
-            </a>
-        </li>
+        <HeaderLink>
+            <i class="fa-brands fa-instagram"></i>
+        </HeaderLink>
+        <HeaderLink>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </HeaderLink>
+        <HeaderLink>
+            <i class="fa-solid fa-sun"></i>
+        </HeaderLink>
     </ul>
 </header>
