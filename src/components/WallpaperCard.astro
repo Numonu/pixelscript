@@ -1,6 +1,12 @@
 ---
 import Tag from "./Tag.astro";
 import { Names } from "./Tag.astro";
+
+interface Props{
+    title : string,
+    src : string
+}
+const {title , src} = Astro.props;
 ---
 
 <style>
@@ -21,7 +27,8 @@ import { Names } from "./Tag.astro";
     <div class="aspect-[16/8]">
         <img
             class="w-full h-full object-cover rounded-tl-xl rounded-tr-xl"
-            src="https://cdn.pixabay.com/photo/2020/01/14/02/09/vapor-4763904_640.jpg"
+            alt={title}
+            src={src}
             alt="name_here"
         />
     </div>
