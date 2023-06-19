@@ -1,7 +1,9 @@
 ---
+import Download from "../components/Download.astro";
 import HeaderStats from "../components/HeaderStats.astro";
 import WallpaperCard from "../components/WallpaperCard.astro";
 ---
+
 <style>
     .button-light:hover {
         --color: rgb(132, 204, 22);
@@ -14,7 +16,7 @@ import WallpaperCard from "../components/WallpaperCard.astro";
     <div class="py-12 lg:py-28">
         <div class="mb-12">
             <h1 class="text-5xl mb-2">
-                Extraordinary rare <br class="hidden md:block"/> digital wallpaper
+                Extraordinary rare <br class="hidden md:block" /> digital wallpaper
             </h1>
             <h2 class="text-2xl mb-6">
                 by <span class="text-lime-500">Numonu</span>
@@ -26,9 +28,33 @@ import WallpaperCard from "../components/WallpaperCard.astro";
                 <i class="fa-solid fa-chevron-down"></i>
             </button>
         </div>
-        <HeaderStats/>
+        <HeaderStats />
     </div>
     <div class="flex items-center">
-        <WallpaperCard/>
+        <WallpaperCard
+            title="js_cubes"
+            src="https://cdn.pixabay.com/photo/2023/06/07/12/51/insect-8047159__340.jpg"
+        >
+            <Download
+                title="js_cubes"
+                actions={[
+                    {
+                        resolution: [2048, 1080],
+                        size: 4,
+                        src: "#",
+                    },
+                    {
+                        resolution: [1048, 720],
+                        size: 2,
+                        src: "#",
+                    },
+                    {
+                        resolution: [720, 320],
+                        size: 1,
+                        src: "#",
+                    },
+                ]}
+            />
+        </WallpaperCard>
     </div>
 </section>
