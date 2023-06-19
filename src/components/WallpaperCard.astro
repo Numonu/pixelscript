@@ -4,9 +4,10 @@ import { Names } from "./Tag.astro";
 
 interface Props{
     title : string,
-    src : string
+    src : string,
+    animated? : boolean
 }
-const {title , src} = Astro.props;
+const {title , src , animated} = Astro.props;
 ---
 
 <style>
@@ -21,7 +22,7 @@ const {title , src} = Astro.props;
 </style>
 <article class="relative max-w-[450px] mx-auto">
     <div
-        class="hidden bg-gradient-to-t animation from-indigo-500 via-pink-500 to-yellow-400 absolute inset-0 blur-xl -z-10 lg:block"
+        class={`hidden bg-gradient-to-t animation from-indigo-500 via-pink-500 to-yellow-400 absolute inset-0 blur-xl -z-10 ${animated && "lg:block"}`}
     >
     </div>
     <div class="aspect-[16/8]">
