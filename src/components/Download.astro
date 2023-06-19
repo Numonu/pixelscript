@@ -1,23 +1,29 @@
 ---
-type Resolution = readonly [number, number];
-interface Data {
-    resolution: Resolution;
+export type Action = {
+    resolution: readonly [number, number];
     size: number;
     src: string;
+    title: string;
 }
-const actions: Data[] = [
-    { resolution: [2048, 1080], size: 30, src: "" },
-    { resolution: [1080, 720], size: 20, src: "" },
-    { resolution: [720, 110], size: 10, src: "" },
-];
+interface Props {
+    actions: Action[];
+}
+const { actions } = Astro.props;
 ---
+
 <style>
-    .reveal{
-        animation : reveal .2s ease;
+    .reveal {
+        animation: reveal 0.2s ease;
     }
     @keyframes reveal {
-        from{opacity:0; scale: .8;}
-        to{opacity: 1; scale: 1;}
+        from {
+            opacity: 0;
+            scale: 0.8;
+        }
+        to {
+            opacity: 1;
+            scale: 1;
+        }
     }
 </style>
 <div class="relative">
@@ -29,23 +35,26 @@ const actions: Data[] = [
         <i class="fa-solid fa-chevron-down"></i>
     </button>
     <div
+        style="display:none"
         id="downloads"
         class="bg-zinc-800 reveal absolute w-[160%] p-2 rounded-md origin-top-right right-0 bottom-0 translate-y-[105%]"
     >
         {
-            actions.map((e: Data) => {
+            actions.map((e: Action) => {
                 return (
-                    <button class="w-full flex justify-between p-2 text-sm rounded-sm hover:bg-zinc-700 transition-colors">
-                        <span class="text-neutral-100">
-                            {e.resolution[0]}
-                            <span class="text-xs">x</span>
-                            {e.resolution[1]}
-                        </span>
-                        <span>
-                            {e.size}
-                            <span class="text-xs">mb</span>
-                        </span>
-                    </button>
+                    <a download={e.title} href={e.src}>
+                        <button class="w-full flex justify-between p-2 text-sm rounded-sm hover:bg-zinc-700 transition-colors">
+                            <span class="text-neutral-100">
+                                {e.resolution[0]}
+                                <span class="text-xs">x</span>
+                                {e.resolution[1]}
+                            </span>
+                            <span>
+                                {e.size}
+                                <span class="text-xs">mb</span>
+                            </span>
+                        </button>
+                    </a>
                 );
             })
         }
@@ -53,13 +62,12 @@ const actions: Data[] = [
 </div>
 
 <script>
-    let show = false;
+    let show = true;
     const btn = document.getElementById("btn-toggle");
     const downloads = document.getElementById("downloads");
 
-    btn?.addEventListener("click" , () => {
-        if(downloads) 
-            downloads.style.display = show ? "block" : "none";
+    btn?.addEventListener("click", () => {
+        if (downloads) downloads.style.display = show ? "block" : "none";
         show = !show;
-    })
+    });
 </script>
