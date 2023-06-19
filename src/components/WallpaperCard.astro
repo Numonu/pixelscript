@@ -35,7 +35,7 @@ const {title , src , animated , tags} = Astro.props;
         />
     </div>
     <div class="bg-zinc-900 p-4 rounded-bl-xl rounded-br-xl">
-        <h3 class="text-2xl font-light mb-4">Neon Wallpaper</h3>
+        <h3 class="text-2xl font-light mb-4">{title}</h3>
         <div class="flex flex-wrap gap-4 mb-6">
             { tags.map(t => <Tag name={t} />) }
         </div>
