@@ -1,13 +1,14 @@
 ---
 import Tag from "./Tag.astro";
-import { Names } from "./Tag.astro";
+import type { Names } from "./Tag.astro";
 
 interface Props{
+    tags : Names[],
     title : string,
     src : string,
     animated? : boolean
 }
-const {title , src , animated} = Astro.props;
+const {title , src , animated , tags} = Astro.props;
 ---
 
 <style>
@@ -20,7 +21,7 @@ const {title , src , animated} = Astro.props;
         }
     }
 </style>
-<article class="relative max-w-[450px] mx-auto">
+<article class="wallpaper relative max-w-[450px] mx-auto">
     <div
         class={`hidden bg-gradient-to-t animation from-indigo-500 via-pink-500 to-yellow-400 absolute inset-0 blur-xl -z-10 ${animated && "lg:block"}`}
     >
@@ -30,15 +31,12 @@ const {title , src , animated} = Astro.props;
             class="w-full h-full object-cover rounded-tl-xl rounded-tr-xl"
             alt={title}
             src={src}
-            alt="name_here"
         />
     </div>
     <div class="bg-zinc-900 p-4 rounded-bl-xl rounded-br-xl">
         <h3 class="text-2xl font-light mb-4">Neon Wallpaper</h3>
-        <div class="flex flex-wrap gap-4 mb-6">
-            <Tag name={Names.HTML} />
-            <Tag name={Names.CSS} />
-            <Tag name={Names.JS} />
+        <div id="tags" class="flex flex-wrap gap-4 mb-6">
+            { tags.map(t => <Tag name={t} />) }
         </div>
         <div class="flex justify-end">
             <slot/>
