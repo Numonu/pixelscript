@@ -29,6 +29,7 @@ const {title , src , animated , tags} = Astro.props;
     <div class="aspect-[16/8]">
         <img
             class="w-full h-full object-cover rounded-tl-xl rounded-tr-xl"
+            loading="lazy"
             alt={title}
             src={src}
         />
