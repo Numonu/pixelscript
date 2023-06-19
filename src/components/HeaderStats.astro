@@ -1,11 +1,27 @@
+<script>
+    window.addEventListener("load", () => {
+        let wallpaperCount = document.querySelector("#wallpaperCount");
+        const wallpaperElements = document.querySelectorAll("wallpaper").length;
+        if (wallpaperCount)
+            wallpaperCount.textContent = `${wallpaperElements + 1}+`;
+        //
+        const tecnologiesCount = document.querySelector("#tecnologies");
+        const tecnologiesElements = document.querySelector("#filter")?.children.length;
+        if (tecnologiesCount && tecnologiesElements)
+            tecnologiesCount.textContent = `${tecnologiesElements - 1}+`;
+    });
+</script>
 <article class="flex justify-start gap-12 flex-wrap capitalize">
     <div>
-        <span class="block text-4xl font-semibold mb-2">200+</span>
+        <span id="wallpaperCount" class="block text-4xl font-semibold mb-2"
+            >0</span
+        >
         <span>wallpapers</span>
     </div>
     <div class="w-[0.15rem] bg-neutral-200"></div>
     <div>
-        <span class="block text-4xl font-semibold mb-2">02+</span>
+        <span id="tecnologies" class="block text-4xl font-semibold mb-2">0</span
+        >
         <span>tecnologies</span>
     </div>
     <div class="w-[0.15rem] bg-neutral-200"></div>
