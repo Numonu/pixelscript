@@ -1,0 +1,27 @@
+---
+import type { Action } from "../components/Download.astro";
+import Download from "../components/Download.astro";
+import WallpaperCard from "../components/WallpaperCard.astro";
+import js from "../database/js.json";
+---
+
+<section class="grid grid-cols-1 gap-6">
+    {
+        js.map((w) => {
+            return (
+                <WallpaperCard title={w.title} src={w.src}>
+                    <Download
+                        title={w.title}
+                        actions={w.downloads.map((d) => {
+                            return {
+                                src: d.src,
+                                size: d.size,
+                                resolution: d.resolution as [number,number],
+                            }
+                        })}
+                    />
+                </WallpaperCard>
+            );
+        })
+    }
+</section>
