@@ -1,6 +1,7 @@
 ---
 import Download from "../components/Download.astro";
 import HeaderStats from "../components/HeaderStats.astro";
+import type { Names } from "../components/Tag.astro";
 import WallpaperCard from "../components/WallpaperCard.astro";
 ---
 
@@ -34,6 +35,7 @@ import WallpaperCard from "../components/WallpaperCard.astro";
         <WallpaperCard
             animated={true}
             title="js_cubes"
+            tags={["javascript"] as Names[]}
             src="https://cdn.pixabay.com/photo/2023/06/07/12/51/insect-8047159__340.jpg"
         >
             <Download
