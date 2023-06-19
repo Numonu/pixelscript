@@ -1,0 +1,22 @@
+---
+import Category from "./Category.astro";
+
+---
+
+<script>
+    const wallpapers = document.querySelectorAll(".wallpaper");
+    const filter = document.querySelector("#filter");
+
+    filter?.addEventListener("click" , (e) => {
+        const target = e.target as HTMLElement;
+        if(target && target !== filter){
+            console.log(target.textContent?.trim());
+        }
+    });
+</script>
+<div id="filter" class="flex flex-wrap gap-4">
+    <Category content="All" />
+    <Category content="html" />
+    <Category content="css" />
+    <Category content="javascript" />
+</div>
