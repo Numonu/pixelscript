@@ -1,22 +1,36 @@
 ---
 import Category from "./Category.astro";
-
+import { Names } from "./Tag.astro";
 ---
 
 <script>
-    const wallpapers = document.querySelectorAll(".wallpaper");
+    const wallpapers = Array.from(
+        document.querySelectorAll(".wallpaper")
+    ) as HTMLElement[];
     const filter = document.querySelector("#filter");
 
-    filter?.addEventListener("click" , (e) => {
+    filter?.addEventListener("click", (e) => {
         const target = e.target as HTMLElement;
-        if(target && target !== filter){
-            console.log(target.textContent?.trim());
+        if (target && target !== filter) {
+            let select: string;
+            if (target.textContent)
+                select = target.textContent.trim().toLowerCase();
+            else select = "all";
+
+            wallpapers.forEach((wallpaper) => {
+                const tags = wallpaper.dataset.tags?.split(",");
+                if (select === "all" || (tags && tags.includes(select))) {
+                    wallpaper.style.display = "block";
+                } else {
+                    wallpaper.style.display = "none";
+                }
+            });
         }
     });
 </script>
 <div id="filter" class="flex flex-wrap gap-4">
-    <Category content="All" />
-    <Category content="html" />
-    <Category content="css" />
-    <Category content="javascript" />
+    <Category content="all" />
+    <Category content={Names.HTML} />
+    <Category content={Names.CSS} />
+    <Category content={Names.JS} />
 </div>
