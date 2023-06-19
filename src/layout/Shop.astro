@@ -1,27 +1,37 @@
 ---
-import type { Action } from "../components/Download.astro";
 import Download from "../components/Download.astro";
+import ShopFilter from "../components/ShopFilter.astro";
+import type { Names } from "../components/Tag.astro";
 import WallpaperCard from "../components/WallpaperCard.astro";
 import js from "../database/js.json";
 ---
 
-<section class="grid grid-cols-1 gap-6">
-    {
-        js.map((w) => {
-            return (
-                <WallpaperCard title={w.title} src={w.src}>
-                    <Download
-                        title={w.title}
-                        actions={w.downloads.map((d) => {
-                            return {
-                                src: d.src,
-                                size: d.size,
-                                resolution: d.resolution as [number,number],
-                            }
-                        })}
-                    />
-                </WallpaperCard>
-            );
-        })
-    }
+<section>
+    <header class="mb-12">
+        <h2 class="text-4xl mb-4">Hot Wallpapers</h2>
+        <ShopFilter/>
+    </header>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {
+            js.map((w) => {
+                return (
+                    <WallpaperCard title={w.title} src={w.src} tags={w.tags as Names[]}>
+                        <Download
+                            title={w.title}
+                            actions={w.downloads.map((d) => {
+                                return {
+                                    src: d.src,
+                                    size: d.size,
+                                    resolution: d.resolution as [
+                                        number,
+                                        number
+                                    ],
+                                };
+                            })}
+                        />
+                    </WallpaperCard>
+                );
+            })
+        }
+    </div>
 </section>
