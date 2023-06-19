@@ -1,26 +1,34 @@
 <script>
+    const displayUp = (element:HTMLElement , value:number , max:number) => {
+        const interval = setInterval(() => {
+            const set = `${(value < 10 && value) && 0}${value}+`;
+            element.textContent = set;
+            if(value >= max) clearInterval(interval);
+            else value++;
+        } , 100);
+    }
     window.addEventListener("load", () => {
-        let wallpaperCount = document.querySelector("#wallpaperCount");
-        const wallpaperElements = document.querySelectorAll("wallpaper").length;
-        if (wallpaperCount)
-            wallpaperCount.textContent = `${wallpaperElements + 1}+`;
+        let wallpaperEl = document.querySelector("#wallpaperEl");
+        const wallpaperCount = document.querySelectorAll("wallpaper").length;
+        if (wallpaperEl)
+            displayUp(wallpaperEl as HTMLElement , 0 , wallpaperCount + 1 );
         //
-        const tecnologiesCount = document.querySelector("#tecnologies");
-        const tecnologiesElements = document.querySelector("#filter")?.children.length;
-        if (tecnologiesCount && tecnologiesElements)
-            tecnologiesCount.textContent = `${tecnologiesElements - 1}+`;
+        const tecnologiesEl = document.querySelector("#tecnologies");
+        const tecnologiesCount = document.querySelector("#filter")?.children.length;
+        if (tecnologiesEl && tecnologiesCount)
+            displayUp(tecnologiesEl as HTMLElement , 0 , tecnologiesCount);
     });
 </script>
 <article class="flex justify-start gap-12 flex-wrap capitalize">
     <div>
-        <span id="wallpaperCount" class="block text-4xl font-semibold mb-2"
-            >0</span
+        <span id="wallpaperEl" class="block text-4xl font-semibold mb-2"
+            >00+</span
         >
         <span>wallpapers</span>
     </div>
     <div class="w-[0.15rem] bg-neutral-200"></div>
     <div>
-        <span id="tecnologies" class="block text-4xl font-semibold mb-2">0</span
+        <span id="tecnologies" class="block text-4xl font-semibold mb-2">00+</span
         >
         <span>tecnologies</span>
     </div>
