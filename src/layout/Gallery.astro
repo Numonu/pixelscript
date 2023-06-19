@@ -1,6 +1,6 @@
 ---
 import Download from "../components/Download.astro";
-import ShopFilter from "../components/ShopFilter.astro";
+import GalleryFilter from "../components/GalleryFilter.astro";
 import type { Names } from "../components/Tag.astro";
 import WallpaperCard from "../components/WallpaperCard.astro";
 import js from "../database/js.json";
@@ -9,7 +9,7 @@ import js from "../database/js.json";
 <section>
     <header class="mb-12">
         <h2 class="text-4xl mb-4">Hot Wallpapers</h2>
-        <ShopFilter/>
+        <GalleryFilter/>
     </header>
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {
