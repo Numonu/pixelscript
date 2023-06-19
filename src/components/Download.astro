@@ -3,12 +3,12 @@ export type Action = {
     resolution: readonly [number, number];
     size: number;
     src: string;
-    title: string;
 }
 interface Props {
+    title : string;
     actions: Action[];
 }
-const { actions } = Astro.props;
+const { actions , title } = Astro.props;
 ---
 
 <style>
@@ -42,7 +42,7 @@ const { actions } = Astro.props;
         {
             actions.map((e: Action) => {
                 return (
-                    <a download={e.title} href={e.src}>
+                    <a download={title} href={e.src}>
                         <button class="w-full flex justify-between p-2 text-sm rounded-sm hover:bg-zinc-700 transition-colors">
                             <span class="text-neutral-100">
                                 {e.resolution[0]}
