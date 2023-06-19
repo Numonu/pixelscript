@@ -3,7 +3,7 @@ import Download from "../components/Download.astro";
 import GalleryFilter from "../components/GalleryFilter.astro";
 import type { Names } from "../components/Tag.astro";
 import WallpaperCard from "../components/WallpaperCard.astro";
-import js from "../database/js.json";
+import data from "../database/data.json";
 ---
 
 <section class="mb-12">
@@ -13,7 +13,7 @@ import js from "../database/js.json";
     </header>
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {
-            js.map((w) => {
+            data.map((w) => {
                 return (
                     <WallpaperCard title={w.title} src={w.src} tags={w.tags as Names[]}>
                         <Download
