@@ -21,7 +21,7 @@ const {title , src , animated , tags} = Astro.props;
         }
     }
 </style>
-<article class="wallpaper relative max-w-[450px] mx-auto">
+<article class="wallpaper relative max-w-[450px] mx-auto" data-tags={tags}>
     <div
         class={`hidden bg-gradient-to-t animation from-indigo-500 via-pink-500 to-yellow-400 absolute inset-0 blur-xl -z-10 ${animated && "lg:block"}`}
     >
@@ -35,7 +35,7 @@ const {title , src , animated , tags} = Astro.props;
     </div>
     <div class="bg-zinc-900 p-4 rounded-bl-xl rounded-br-xl">
         <h3 class="text-2xl font-light mb-4">Neon Wallpaper</h3>
-        <div id="tags" class="flex flex-wrap gap-4 mb-6">
+        <div class="flex flex-wrap gap-4 mb-6">
             { tags.map(t => <Tag name={t} />) }
         </div>
         <div class="flex justify-end">
