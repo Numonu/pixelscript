@@ -28,7 +28,7 @@ const { actions , title } = Astro.props;
 </style>
 <div class="relative">
     <button
-        id="btn-toggle"
+        id={`btn-${title}`}
         class="bg-zinc-800 relative px-4 py-2 text-sm uppercase rounded-md hover:bg-zinc-700 transition-colors"
     >
         <span class="mr-2"> download</span>
@@ -36,7 +36,7 @@ const { actions , title } = Astro.props;
     </button>
     <div
         style="display:none"
-        id="downloads"
+        id={`downloads-${title}`}
         class="bg-zinc-800 reveal absolute z-10 w-[160%] p-2 rounded-md origin-top-right right-0 bottom-0 translate-y-[105%]"
     >
         {
@@ -61,10 +61,10 @@ const { actions , title } = Astro.props;
     </div>
 </div>
 
-<script>
+<script define:vars={{title}}>
     let show = true;
-    const btn = document.getElementById("btn-toggle");
-    const downloads = document.getElementById("downloads");
+    const btn = document.getElementById(`btn-${title}`);
+    const downloads = document.getElementById(`downloads-${title}`);
 
     btn?.addEventListener("click", () => {
         if (downloads) downloads.style.display = show ? "block" : "none";
