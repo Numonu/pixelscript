@@ -37,7 +37,7 @@ const { actions , title } = Astro.props;
     <div
         style="display:none"
         id="downloads"
-        class="bg-zinc-800 reveal absolute w-[160%] p-2 rounded-md origin-top-right right-0 bottom-0 translate-y-[105%]"
+        class="bg-zinc-800 reveal absolute z-10 w-[160%] p-2 rounded-md origin-top-right right-0 bottom-0 translate-y-[105%]"
     >
         {
             actions.map((e: Action) => {
