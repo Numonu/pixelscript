@@ -1,5 +1,4 @@
 ---
-import Download from "./Download.astro";
 import Tag from "./Tag.astro";
 import { Names } from "./Tag.astro";
 ---
@@ -34,7 +33,7 @@ import { Names } from "./Tag.astro";
             <Tag name={Names.JS} />
         </div>
         <div class="flex justify-end">
-            <Download />
+            <slot/>
         </div>
     </div>
 </article>
