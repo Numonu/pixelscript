@@ -9,14 +9,14 @@
     }
     window.addEventListener("load", () => {
         let wallpaperEl = document.querySelector("#wallpaperEl");
-        const wallpaperCount = document.querySelectorAll("wallpaper").length;
+        const wallpaperCount = document.querySelectorAll(".wallpaper").length;
         if (wallpaperEl)
-            displayUp(wallpaperEl as HTMLElement , 0 , wallpaperCount + 1 );
+            displayUp(wallpaperEl as HTMLElement , 0 , wallpaperCount);
         //
         const tecnologiesEl = document.querySelector("#tecnologies");
         const tecnologiesCount = document.querySelector("#filter")?.children.length;
         if (tecnologiesEl && tecnologiesCount)
-            displayUp(tecnologiesEl as HTMLElement , 0 , tecnologiesCount);
+            displayUp(tecnologiesEl as HTMLElement , 0 , tecnologiesCount - 1);
     });
 </script>
 <article class="flex justify-start gap-12 flex-wrap capitalize">
