@@ -9,3 +9,6 @@ body{
         transition: none !important;
     }
   }
+html{
+    font-size: 15px;
+}
