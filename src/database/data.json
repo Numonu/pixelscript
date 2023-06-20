@@ -1,40 +1,22 @@
 [
-    {
-        "title" : "dark_shapes",
-        "tags" : ["javascript"],
-        "src" : "wallpapers/javascript/dark_shapes/dark_shapes_hd.jpg",
-        "downloads" : [
-            {
-                "size" : 1.18,
-                "src" : "wallpapers/javascript/dark_shapes/dark_shapes_2K.jpg"
-            },
-            {
-                "size" : 0.68,
-                "src" : "wallpapers/javascript/dark_shapes/dark_shapes_1K.jpg"
-            },
-            {
-                "size" : 0.44,
-                "src" : "wallpapers/javascript/dark_shapes/dark_shapes_hd.jpg"
-            }
-        ]
-    },
-    {
-        "title" : "cyber_html",
-        "tags" : ["html"],
-        "src" : "wallpapers/html/cyber_html/cyber_html_hd.jpg",
-        "downloads" : [
-            {
-                "size" : 1.18,
-                "src" : "wallpapers/html/cyber_html/cyber_html_2K.jpg"
-            },
-            {
-                "size" : 0.68,
-                "src" : "wallpapers/html/cyber_html/cyber_html_1K.jpg"
-            },
-            {
-                "size" : 0.44,
-                "src" : "wallpapers/html/cyber_html/cyber_html_hd.jpg"
-            }
-        ]
-    }
+	{
+		"title": "dark_shapes",
+		"tags": ["javascript"],
+		"src": "wallpapers/javascript/dark_shapes/dark_shapes_hd.jpg",
+		"downloads": [
+			"wallpapers/javascript/dark_shapes/dark_shapes_2K.jpg",
+			"wallpapers/javascript/dark_shapes/dark_shapes_1K.jpg",
+			"wallpapers/javascript/dark_shapes/dark_shapes_hd.jpg"
+		]
+	},
+	{
+		"title": "cyber_html",
+		"tags": ["html"],
+		"src": "wallpapers/html/cyber_html/cyber_html_hd.jpg",
+		"downloads": [
+			"wallpapers/html/cyber_html/cyber_html_2K.jpg",
+			"wallpapers/html/cyber_html/cyber_html_1K.jpg",
+			"wallpapers/html/cyber_html/cyber_html_hd.jpg"
+		]
+	}
 ]
