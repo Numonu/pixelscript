@@ -39,16 +39,7 @@ import data from "../database/data.json";
                     <WallpaperCard animated={true} title={w.title} src={w.src} tags={w.tags as Names[]}>
                         <Download
                             title={w.title}
-                            actions={w.downloads.map((d) => {
-                                return {
-                                    src: d.src,
-                                    size: d.size,
-                                    resolution: d.resolution as [
-                                        number,
-                                        number
-                                    ],
-                                };
-                            })}
+                            downloads={w.downloads}
                         />
                     </WallpaperCard>
                 );

@@ -9,26 +9,18 @@ import data from "../database/data.json";
 <section class="mb-12">
     <header class="mb-12">
         <h2 class="text-4xl mb-4">Hot Wallpapers</h2>
-        <GalleryFilter/>
+        <GalleryFilter />
     </header>
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {
             data.slice(1).map((w) => {
                 return (
-                    <WallpaperCard title={w.title} src={w.src} tags={w.tags as Names[]}>
-                        <Download
-                            title={w.title}
-                            actions={w.downloads.map((d) => {
-                                return {
-                                    src: d.src,
-                                    size: d.size,
-                                    resolution: d.resolution as [
-                                        number,
-                                        number
-                                    ],
-                                };
-                            })}
-                        />
+                    <WallpaperCard
+                        title={w.title}
+                        src={w.src}
+                        tags={w.tags as Names[]}
+                    >
+                        <Download title={w.title} downloads={w.downloads} />
                     </WallpaperCard>
                 );
             })

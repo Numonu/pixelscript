@@ -1,13 +1,9 @@
 ---
-export type Action = {
-    size: number;
-    src: string;
-}
 interface Props {
     title : string;
-    actions: Action[];
+    downloads : string[];
 }
-const { actions , title } = Astro.props;
+const { downloads , title } = Astro.props;
 ---
 
 <style>
@@ -39,9 +35,9 @@ const { actions , title } = Astro.props;
         class="bg-zinc-800 reveal absolute w-[120%] z-10 p-2 rounded-md origin-top-right right-0 bottom-0 translate-y-[105%]"
     >
         {
-            actions.map((e: Action , i) => {
+            downloads.map((e,i) => {
                 return (
-                    <a download={title} href={e.src} target="_blank">
+                    <a download={title} href={e} target="_blank">
                         <button class="w-full flex justify-between p-2 text-sm rounded-md hover:bg-zinc-700 transition-colors">
                             <span>
                                 {[2048,1548,1248][i]}
@@ -57,7 +53,7 @@ const { actions , title } = Astro.props;
     </div>
 </div>
 
-<script define:vars={{title,actions}}>
+<script define:vars={{title}}>
     //display dialog
     let show = true;
     const btn = document.getElementById(`btn-${title}`);
