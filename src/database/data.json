@@ -1,5 +1,15 @@
 [
 	{
+		"title": "now_power",
+		"tags": ["tools","javascript","node"],
+		"src": "wallpapers/tools/now_power/now_power_hd.jpg",
+		"downloads": [
+			"wallpapers/tools/now_power/now_power_2K.jpg",
+			"wallpapers/tools/now_power/now_power_1K.jpg",
+			"wallpapers/tools/now_power/now_power_hd.jpg"
+		]
+	},
+	{
 		"title": "type_world",
 		"tags": ["typescript","javascript"],
 		"src": "wallpapers/javascript/type_world/type_world_hd.jpg",
@@ -11,7 +21,7 @@
 	},
 	{
 		"title": "relax_tailwind",
-		"tags": ["css","tool"],
+		"tags": ["css","tools"],
 		"src": "wallpapers/tailwind/relax_tailwind/relax_tailwind_hd.jpg",
 		"downloads": [
 			"wallpapers/tailwind/relax_tailwind/relax_tailwind_2K.jpg",
