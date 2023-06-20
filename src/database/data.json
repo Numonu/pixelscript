@@ -10,6 +10,16 @@
 		]
 	},
 	{
+		"title": "flat_vue",
+		"tags": ["vue"],
+		"src": "wallpapers/vue/flat_vue/flat_vue_hd.jpg",
+		"downloads": [
+			"wallpapers/vue/flat_vue/flat_vue_2K.jpg",
+			"wallpapers/vue/flat_vue/flat_vue_1K.jpg",
+			"wallpapers/vue/flat_vue/flat_vue_hd.jpg"
+		]
+	},
+	{
 		"title": "neon_html",
 		"tags": ["html"],
 		"src": "wallpapers/html/neon_html/neon_html_hd.jpg",
