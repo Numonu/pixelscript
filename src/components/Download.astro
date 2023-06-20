@@ -1,6 +1,5 @@
 ---
 export type Action = {
-    resolution: readonly [number, number];
     size: number;
     src: string;
 }
@@ -40,18 +39,18 @@ const { actions , title } = Astro.props;
         class="bg-zinc-800 reveal absolute z-10 w-[160%] p-2 rounded-md origin-top-right right-0 bottom-0 translate-y-[105%]"
     >
         {
-            actions.map((e: Action) => {
+            actions.map((e: Action , i) => {
                 return (
                     <a download={title} href={e.src} target="_blank">
                         <button class="w-full flex justify-between p-2 text-sm rounded-sm hover:bg-zinc-700 transition-colors">
                             <span class="text-neutral-100">
-                                {e.resolution[0]}
+                                <span id={`width-${title}-${i}`}></span>
                                 <span class="text-xs">x</span>
-                                {e.resolution[1]}
+                                <span id={`height-${title}-${i}`}></span>
                             </span>
                             <span>
-                                {e.size}
-                                <span class="text-xs">mb</span>
+                            {e.size} 
+                            <span class="text-xs">mb</span>
                             </span>
                         </button>
                     </a>
@@ -61,7 +60,8 @@ const { actions , title } = Astro.props;
     </div>
 </div>
 
-<script define:vars={{title}}>
+<script define:vars={{title,actions}}>
+    //display dialog
     let show = true;
     const btn = document.getElementById(`btn-${title}`);
     const downloads = document.getElementById(`downloads-${title}`);
@@ -69,5 +69,19 @@ const { actions , title } = Astro.props;
     btn?.addEventListener("click", () => {
         if (downloads) downloads.style.display = show ? "block" : "none";
         show = !show;
+    });
+    //img size
+    window.addEventListener("load",  () => {
+        actions.forEach((e,i) => {
+            const width = document.getElementById(`width-${title}-${i}`);
+            const height = document.getElementById(`height-${title}-${i}`);
+            //
+            const img = document.createElement("img");
+            img.src = e.src;
+            img.addEventListener("load" , () => {
+                width.textContent = img.naturalWidth;
+                height.textContent = img.naturalHeight;
+            })
+        });
     });
 </script>
