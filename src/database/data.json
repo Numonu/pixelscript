@@ -1,5 +1,15 @@
 [
 	{
+		"title": "neon_speed",
+		"tags": ["tools","javascript","typescript","react","vue","svelte"],
+		"src": "wallpapers/tools/neon_speed/neon_speed_hd.jpg",
+		"downloads": [
+			"wallpapers/tools/neon_speed/neon_speed_2K.jpg",
+			"wallpapers/tools/neon_speed/neon_speed_1K.jpg",
+			"wallpapers/tools/neon_speed/neon_speed_hd.jpg"
+		]
+	},
+	{
 		"title": "now_power",
 		"tags": ["tools","javascript","node"],
 		"src": "wallpapers/tools/now_power/now_power_hd.jpg",
