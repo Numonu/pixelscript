@@ -3,6 +3,7 @@ import Download from "../components/Download.astro";
 import HeaderStats from "../components/HeaderStats.astro";
 import type { Names } from "../components/Tag.astro";
 import WallpaperCard from "../components/WallpaperCard.astro";
+import data from "../database/data.json";
 ---
 
 <style>
@@ -32,32 +33,26 @@ import WallpaperCard from "../components/WallpaperCard.astro";
         <HeaderStats />
     </div>
     <div class="flex items-center">
-        <WallpaperCard
-            animated={true}
-            title="js_cubes"
-            tags={["javascript"] as Names[]}
-            src="https://cdn.pixabay.com/photo/2023/06/07/12/51/insect-8047159__340.jpg"
-        >
-            <Download
-                title="js_cubes"
-                actions={[
-                    {
-                        resolution: [2048, 1080],
-                        size: 4,
-                        src: "#",
-                    },
-                    {
-                        resolution: [1048, 720],
-                        size: 2,
-                        src: "#",
-                    },
-                    {
-                        resolution: [720, 320],
-                        size: 1,
-                        src: "#",
-                    },
-                ]}
-            />
-        </WallpaperCard>
+        {
+            data.splice(0,1).map((w) => {
+                return (
+                    <WallpaperCard title={w.title} src={w.src} tags={w.tags as Names[]}>
+                        <Download
+                            title={w.title}
+                            actions={w.downloads.map((d) => {
+                                return {
+                                    src: d.src,
+                                    size: d.size,
+                                    resolution: d.resolution as [
+                                        number,
+                                        number
+                                    ],
+                                };
+                            })}
+                        />
+                    </WallpaperCard>
+                );
+            })
+        }
     </div>
 </section>
