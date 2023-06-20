@@ -1,5 +1,15 @@
 [
 	{
+		"title": "relax_tailwind",
+		"tags": ["css","tool"],
+		"src": "wallpapers/tailwind/relax_tailwind/relax_tailwind_hd.jpg",
+		"downloads": [
+			"wallpapers/tailwind/relax_tailwind/relax_tailwind_2K.jpg",
+			"wallpapers/tailwind/relax_tailwind/relax_tailwind_1K.jpg",
+			"wallpapers/tailwind/relax_tailwind/relax_tailwind_hd.jpg"
+		]
+	},
+	{
 		"title": "dark_shapes",
 		"tags": ["javascript"],
 		"src": "wallpapers/javascript/dark_shapes/dark_shapes_hd.jpg",
