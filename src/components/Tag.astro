@@ -2,7 +2,13 @@
 export const enum Names {
     HTML = "html",
     CSS = "css",
-    JS = "javascript"
+    JS = "javascript",
+    TOOL = "tools",
+    VUE = "vue",
+    TYPESCRIPT = "typescript",
+    NODE = "node",
+    REACT = "react",
+    SVELTE = "svelte"
 }
 interface Props{name : Names}
 const {name} = Astro.props;
@@ -12,6 +18,12 @@ switch(name){
     case Names.HTML:style = "text-orange-400 border-orange-400";break;
     case Names.CSS:style = "text-blue-400 border-blue-400";break;
     case Names.JS:style = "text-yellow-400 border-yellow-500";break;
+    case Names.VUE:style = "text-lime-400 border-lime-500";break;
+    case Names.TOOL:style = "text-neutral-400 border-neutral-500";break;
+    case Names.TYPESCRIPT:style = "text-blue-400 border-blue-500";break;
+    case Names.NODE:style = "text-green-400 border-green-500";break;
+    case Names.REACT:style = "text-cyan-400 border-cyan-400";break;
+    case Names.SVELTE:style = "text-orange-400 border-orange-400";break;
     default:style = "text-neutral-50 border-neutral-50";
 }
 ---
