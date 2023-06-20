@@ -1,5 +1,15 @@
 [
 	{
+		"title": "type_world",
+		"tags": ["typescript","javascript"],
+		"src": "wallpapers/javascript/type_world/type_world_hd.jpg",
+		"downloads": [
+			"wallpapers/javascript/type_world/type_world_2K.jpg",
+			"wallpapers/javascript/type_world/type_world_1K.jpg",
+			"wallpapers/javascript/type_world/type_world_hd.jpg"
+		]
+	},
+	{
 		"title": "relax_tailwind",
 		"tags": ["css","tool"],
 		"src": "wallpapers/tailwind/relax_tailwind/relax_tailwind_hd.jpg",
