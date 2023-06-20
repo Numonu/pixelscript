@@ -34,9 +34,9 @@ import data from "../database/data.json";
     </div>
     <div class="flex items-center">
         {
-            data.splice(0,1).map((w) => {
+            data.slice(0,1).map((w) => {
                 return (
-                    <WallpaperCard title={w.title} src={w.src} tags={w.tags as Names[]}>
+                    <WallpaperCard animated={true} title={w.title} src={w.src} tags={w.tags as Names[]}>
                         <Download
                             title={w.title}
                             actions={w.downloads.map((d) => {

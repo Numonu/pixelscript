@@ -13,7 +13,7 @@ import data from "../database/data.json";
     </header>
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {
-            data.map((w) => {
+            data.slice(1).map((w) => {
                 return (
                     <WallpaperCard title={w.title} src={w.src} tags={w.tags as Names[]}>
                         <Download
