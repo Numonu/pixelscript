@@ -10,13 +10,13 @@
 		]
 	},
 	{
-		"title": "cyber_html",
+		"title": "neon_html",
 		"tags": ["html"],
-		"src": "wallpapers/html/cyber_html/cyber_html_hd.jpg",
+		"src": "wallpapers/html/neon_html/neon_html_hd.jpg",
 		"downloads": [
-			"wallpapers/html/cyber_html/cyber_html_2K.jpg",
-			"wallpapers/html/cyber_html/cyber_html_1K.jpg",
-			"wallpapers/html/cyber_html/cyber_html_hd.jpg"
+			"wallpapers/html/neon_html/neon_html_2K.jpg",
+			"wallpapers/html/neon_html/neon_html_1K.jpg",
+			"wallpapers/html/neon_html/neon_html_hd.jpg"
 		]
 	}
 ]
