@@ -5,7 +5,7 @@ import type { Names } from "./Tag.astro";
 interface Props{
     data : {
         title : string,
-        src : string,
+        folder : string,
         tags : string[],
     },
     animated? : boolean
@@ -33,13 +33,13 @@ const {data , animated = false} = Astro.props;
             class="absolute w-full h-full object-cover rounded-tl-xl rounded-tr-xl"
             loading="lazy"
             alt={data.title}
-            src={`wallpapers/${data.src}/${data.src.split("/")[1]}_small.jpg`}
+            src={`wallpapers/${data.folder}/${data.title}/${data.title}_small.jpg`}
         />
         <img
             class="absolute inset-0 object-cover rounded-tl-xl rounded-tr-xl"
             loading="lazy"
             alt={data.title}
-            src={`wallpapers/${data.src}/${data.src.split("/")[1]}_miniature.jpg`}
+            src={`wallpapers/${data.folder}/${data.title}/${data.title}_miniature.jpg`}
         />
     </div>
     <div class="bg-zinc-900 p-4 rounded-bl-xl rounded-br-xl">

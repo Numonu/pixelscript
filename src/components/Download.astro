@@ -1,9 +1,9 @@
 ---
 interface Props {
     title: string;
-    baseUrl: string;
+    folder: string;
 }
-const { baseUrl, title } = Astro.props;
+const { folder, title } = Astro.props;
 ---
 
 <style>
@@ -39,7 +39,7 @@ const { baseUrl, title } = Astro.props;
                 return (
                     <a
                         download={title}
-                        href={`wallpapers/${baseUrl}/${baseUrl.split("/")[1]}${e}`}
+                        href={`wallpapers/${folder}/${title}/${title}${e}`}
                         target="_blank"
                     >
                         <button class="w-full flex justify-between p-2 text-sm rounded-md hover:bg-zinc-700 transition-colors">

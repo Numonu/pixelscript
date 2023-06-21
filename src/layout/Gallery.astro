@@ -15,7 +15,7 @@ import data from "../database/data.json";
             data.slice(1).map((d) => {
                 return (
                     <WallpaperCard data={d}>
-                        <Download title={d.title} baseUrl={d.src} />
+                        <Download title={d.title} folder={d.folder} />
                     </WallpaperCard>
                 );
             })
