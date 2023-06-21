@@ -2,11 +2,11 @@
 	{
         "title" : "vite_square",
         "tags" : ["tools","react","svelte","javascript","typescript"],
-        "src" : "tools/vite_square"
+        "folder" : "tools"
     },
     {
         "title" : "type_world",
         "tags" : ["javascript","typescript"],
-        "src" : "javascript/type_world"
+        "folder" : "javascript"
     }
 ]
