@@ -13,5 +13,10 @@
         "title" : "js_shapes",
         "tags" : ["javascript"],
         "folder" : "javascript"
+    },
+    {
+        "title" : "vue_slice",
+        "tags" : ["vue","javascript","typescript"],
+        "folder" : "framework"
     }
 ]
