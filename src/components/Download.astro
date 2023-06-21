@@ -35,11 +35,11 @@ const { baseUrl, title } = Astro.props;
         class="bg-zinc-800 reveal absolute w-[120%] z-10 p-2 rounded-md origin-top-right right-0 bottom-0 translate-y-[105%]"
     >
         {
-            ["_2K.jpg", "_1K.jpg", "_hd.jpg"].map((e, i) => {
+            ["_2K.png", "_1K.png", "_hd.png"].map((e, i) => {
                 return (
                     <a
                         download={title}
-                        href={baseUrl + e}
+                        href={`wallpapers/${baseUrl}/${baseUrl.split("/")[1]}${e}`}
                         target="_blank"
                     >
                         <button class="w-full flex justify-between p-2 text-sm rounded-md hover:bg-zinc-700 transition-colors">
