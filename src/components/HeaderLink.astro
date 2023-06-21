@@ -4,10 +4,8 @@ interface Props {
 }
 const {href="#"} = Astro.props;
 ---
-<li
-    class="border-neutral-50 grid place-items-center w-12 aspect-square rounded-full border-2 cursor-pointer hover:bg-neutral-50 hover:text-neutral-900 transition-colors"
->
-    <a href={href}>
+<li>
+    <a class="border-neutral-50 grid place-items-center w-12 aspect-square rounded-full border-2 cursor-pointer hover:bg-neutral-50 hover:text-neutral-900 transition-colors" href={href}>
         <slot/>
     </a>
 </li>
