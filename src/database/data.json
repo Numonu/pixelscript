@@ -6,7 +6,12 @@
     },
     {
         "title" : "type_world",
-        "tags" : ["javascript","typescript"],
+        "tags" : ["typescript","javascript"],
+        "folder" : "javascript"
+    },
+    {
+        "title" : "js_shapes",
+        "tags" : ["javascript"],
         "folder" : "javascript"
     }
 ]
