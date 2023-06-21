@@ -4,22 +4,26 @@ import { Names } from "./Tag.astro";
 ---
 
 <script>
-    const wallpapers = Array.from(
-        document.querySelectorAll(".wallpaper")
-    ) as HTMLElement[];
+    const wallpapers = [...document.querySelectorAll(".wallpaper")] as HTMLElement[];
     const filter = document.querySelector("#filter");
 
     filter?.addEventListener("click", (e) => {
         const target = e.target as HTMLElement;
+
         if (target && target !== filter) {
             let select: string;
-            if (target.textContent)
+
+            if (target.textContent){
                 select = target.textContent.trim().toLowerCase();
-            else select = "all";
+            }
+            else {
+                select = "all";
+            }
 
             wallpapers.forEach((wallpaper) => {
                 const tags = wallpaper.dataset.tags?.split(",");
-                if (select === "all" || (tags && tags.includes(select))) {
+
+                if (select === "all" || tags?.includes(select)) {
                     wallpaper.style.display = "block";
                 } else {
                     wallpaper.style.display = "none";
