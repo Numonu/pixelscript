@@ -1,3 +1,7 @@
 [
-	
+	{
+        "title" : "vite_square",
+        "tags" : ["tools","react","svelte","javascript","typescript"],
+        "src" : "tools/vite_square"
+    }
 ]
