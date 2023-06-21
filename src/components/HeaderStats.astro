@@ -1,22 +1,30 @@
 <script>
-    const displayUp = (element:HTMLElement , value:number , max:number) => {
+    const displayUp = (element:HTMLElement , max:number) => {
+        let value = 0;
         const interval = setInterval(() => {
-            const set = `${(value < 10 && value) && 0}${value}+`;
-            element.textContent = set;
+
+            element.textContent = `${value < 10 && 0}${value}+`;
+
             if(value >= max) clearInterval(interval);
             else value++;
+
         } , 100);
     }
+    //
     window.addEventListener("load", () => {
-        let wallpaperEl = document.querySelector("#wallpaperEl");
+        let wallpaperEl = document.querySelector("#wallpaperEl") as HTMLElement;
         const wallpaperCount = document.querySelectorAll(".wallpaper").length;
-        if (wallpaperEl)
-            displayUp(wallpaperEl as HTMLElement , 0 , wallpaperCount);
+
+        if (wallpaperEl){
+            displayUp(wallpaperEl, wallpaperCount);
+        }
         //
-        const tecnologiesEl = document.querySelector("#tecnologies");
+        const tecnologiesEl = document.querySelector("#tecnologies") as HTMLElement;
         const tecnologiesCount = document.querySelector("#filter")?.children.length;
-        if (tecnologiesEl && tecnologiesCount)
-            displayUp(tecnologiesEl as HTMLElement , 0 , tecnologiesCount - 1);
+
+        if (tecnologiesEl && tecnologiesCount){
+            displayUp(tecnologiesEl , tecnologiesCount - 1);
+        }
     });
 </script>
 <article class="flex justify-center gap-6 flex-wrap capitalize sm:gap-12 lg:justify-start">
