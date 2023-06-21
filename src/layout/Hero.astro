@@ -34,12 +34,12 @@ import data from "../database/data.json";
     </div>
     <div class="flex items-center">
         {
-            data.slice(0,1).map((w) => {
+            data.slice(0,1).map((d) => {
                 return (
-                    <WallpaperCard animated={true} title={w.title} src={w.src} tags={w.tags as Names[]}>
+                    <WallpaperCard data={d} animated={true}>
                         <Download
-                            title={w.title}
-                            downloads={w.downloads}
+                            title={d.title}
+                            downloads={d.downloads}
                         />
                     </WallpaperCard>
                 );
