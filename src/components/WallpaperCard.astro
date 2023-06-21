@@ -3,12 +3,14 @@ import Tag from "./Tag.astro";
 import type { Names } from "./Tag.astro";
 
 interface Props{
-    tags : Names[],
-    title : string,
-    src : string,
+    data : {
+        title : string,
+        src : string,
+        tags : string[],
+    },
     animated? : boolean
 }
-const {title , src , animated , tags} = Astro.props;
+const {data , animated = false} = Astro.props;
 ---
 
 <style>
@@ -21,7 +23,7 @@ const {title , src , animated , tags} = Astro.props;
         }
     }
 </style>
-<article class="wallpaper w-full relative max-w-[450px] mx-auto" data-tags={tags}>
+<article class="wallpaper w-full relative max-w-[450px] mx-auto" data-tags={data.tags}>
     <div
         class={`hidden bg-gradient-to-t animation from-indigo-500 via-pink-500 to-yellow-400 absolute inset-0 blur-xl -z-10 ${animated && "md:block"}`}
     >
@@ -30,14 +32,14 @@ const {title , src , animated , tags} = Astro.props;
         <img
             class="absolute inset-0 object-cover rounded-tl-xl rounded-tr-xl"
             loading="lazy"
-            alt={title}
-            src={src}
+            alt={data.title}
+            src={data.src}
         />
     </div>
     <div class="bg-zinc-900 p-4 rounded-bl-xl rounded-br-xl">
-        <h3 class="text-2xl font-light mb-4">{title}</h3>
+        <h3 class="text-2xl font-light mb-4">{data.title}</h3>
         <div class="flex flex-wrap gap-4 mb-6">
-            { tags.map(t => <Tag name={t} />) }
+            { data.tags.map((t) => <Tag name={t as Names} />) }
         </div>
         <div class="flex justify-end">
             <slot/>
