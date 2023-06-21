@@ -1,9 +1,9 @@
 ---
 interface Props {
-    title : string;
-    downloads : string[];
+    title: string;
+    baseUrl: string;
 }
-const { downloads , title } = Astro.props;
+const { baseUrl, title } = Astro.props;
 ---
 
 <style>
@@ -35,16 +35,20 @@ const { downloads , title } = Astro.props;
         class="bg-zinc-800 reveal absolute w-[120%] z-10 p-2 rounded-md origin-top-right right-0 bottom-0 translate-y-[105%]"
     >
         {
-            downloads.map((e,i) => {
+            ["_2K.jpg", "_1K.jpg", "_hd.jpg"].map((e, i) => {
                 return (
-                    <a download={title} href={e} target="_blank">
+                    <a
+                        download={title}
+                        href={baseUrl + e}
+                        target="_blank"
+                    >
                         <button class="w-full flex justify-between p-2 text-sm rounded-md hover:bg-zinc-700 transition-colors">
                             <span>
-                                {[2048,1548,1248][i]}
+                                {[2048, 1548, 1248][i]}
                                 <span class="text-xs">x</span>
-                                {[1080,816,658][i]}
+                                {[1080, 816, 658][i]}
                             </span>
-                            <i class="fa-solid fa-download"></i>
+                            <i class="fa-solid fa-download" />
                         </button>
                     </a>
                 );
@@ -53,13 +57,13 @@ const { downloads , title } = Astro.props;
     </div>
 </div>
 
-<script define:vars={{title}}>
-    //display dialog
-    let show = true;
-    const btn = document.getElementById(`btn-${title}`);
-    const downloads = document.getElementById(`downloads-${title}`);
-    btn?.addEventListener("click", () => {
-        if (downloads) downloads.style.display = show ? "block" : "none";
-        show = !show;
-    });
+<script define:vars={{ title }}>
+//display dialog
+let show = true;
+const btn = document.getElementById(`btn-${title}`);
+const downloads = document.getElementById(`downloads-${title}`);
+btn?.addEventListener("click", () => {
+    if (downloads) downloads.style.display = show ? "block" : "none";
+    show = !show;
+});
 </script>
