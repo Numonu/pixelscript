@@ -5,6 +5,11 @@
         "folder" : "tools"
     },
     {
+        "title" : "pixel_java",
+        "tags" : ["java"],
+        "folder" : "java"
+    },
+    {
         "title" : "type_world",
         "tags" : ["typescript","javascript"],
         "folder" : "javascript"
