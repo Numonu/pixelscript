@@ -39,7 +39,7 @@ import data from "../database/data.json";
                     <WallpaperCard data={d} animated={true}>
                         <Download
                             title={d.title}
-                            downloads={d.downloads}
+                            baseUrl={d.src}
                         />
                     </WallpaperCard>
                 );
