@@ -3,7 +3,7 @@
         let value = 0;
         const interval = setInterval(() => {
 
-            element.textContent = `${value < 10 && 0}${value}+`;
+            element.textContent = `${value < 10 ? "0" : ""}${value}+`;
 
             if(value >= max) clearInterval(interval);
             else value++;
