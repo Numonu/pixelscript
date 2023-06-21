@@ -1,0 +1,19 @@
+---
+const getUpdateDate = () => {
+  const months = [
+    'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
+  ];
+
+  const date = new Date();
+  const day = date.getDate();
+  const month = date.getMonth();
+  const year = date.getFullYear();
+
+  const updateDate = `Last updated on ${months[month]} ${day}, ${year}`;
+
+  return updateDate;
+};
+
+const result = getUpdateDate();
+---
+<span class="text-neutral-50 opacity-50 text-sm">{result}</span>
