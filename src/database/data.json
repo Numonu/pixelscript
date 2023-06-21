@@ -2,71 +2,36 @@
 	{
 		"title": "neon_speed",
 		"tags": ["tools","javascript","typescript","react","vue","svelte"],
-		"src": "wallpapers/tools/neon_speed/neon_speed_hd.jpg",
-		"downloads": [
-			"wallpapers/tools/neon_speed/neon_speed_2K.jpg",
-			"wallpapers/tools/neon_speed/neon_speed_1K.jpg",
-			"wallpapers/tools/neon_speed/neon_speed_hd.jpg"
-		]
+		"src": "wallpapers/tools/neon_speed/neon_speed"
 	},
 	{
 		"title": "now_power",
 		"tags": ["tools","javascript","node"],
-		"src": "wallpapers/tools/now_power/now_power_hd.jpg",
-		"downloads": [
-			"wallpapers/tools/now_power/now_power_2K.jpg",
-			"wallpapers/tools/now_power/now_power_1K.jpg",
-			"wallpapers/tools/now_power/now_power_hd.jpg"
-		]
+		"src": "wallpapers/tools/now_power/now_power"
 	},
 	{
 		"title": "type_world",
 		"tags": ["typescript","javascript"],
-		"src": "wallpapers/javascript/type_world/type_world_hd.jpg",
-		"downloads": [
-			"wallpapers/javascript/type_world/type_world_2K.jpg",
-			"wallpapers/javascript/type_world/type_world_1K.jpg",
-			"wallpapers/javascript/type_world/type_world_hd.jpg"
-		]
+		"src": "wallpapers/javascript/type_world/type_world"
 	},
 	{
 		"title": "relax_tailwind",
 		"tags": ["css","tools"],
-		"src": "wallpapers/tailwind/relax_tailwind/relax_tailwind_hd.jpg",
-		"downloads": [
-			"wallpapers/tailwind/relax_tailwind/relax_tailwind_2K.jpg",
-			"wallpapers/tailwind/relax_tailwind/relax_tailwind_1K.jpg",
-			"wallpapers/tailwind/relax_tailwind/relax_tailwind_hd.jpg"
-		]
+		"src": "wallpapers/tailwind/relax_tailwind/relax_tailwind"
 	},
 	{
 		"title": "dark_shapes",
 		"tags": ["javascript"],
-		"src": "wallpapers/javascript/dark_shapes/dark_shapes_hd.jpg",
-		"downloads": [
-			"wallpapers/javascript/dark_shapes/dark_shapes_2K.jpg",
-			"wallpapers/javascript/dark_shapes/dark_shapes_1K.jpg",
-			"wallpapers/javascript/dark_shapes/dark_shapes_hd.jpg"
-		]
+		"src": "wallpapers/javascript/dark_shapes/dark_shapes"
 	},
 	{
 		"title": "flat_vue",
 		"tags": ["vue"],
-		"src": "wallpapers/vue/flat_vue/flat_vue_hd.jpg",
-		"downloads": [
-			"wallpapers/vue/flat_vue/flat_vue_2K.jpg",
-			"wallpapers/vue/flat_vue/flat_vue_1K.jpg",
-			"wallpapers/vue/flat_vue/flat_vue_hd.jpg"
-		]
+		"src": "wallpapers/vue/flat_vue/flat_vue"
 	},
 	{
 		"title": "neon_html",
 		"tags": ["html"],
-		"src": "wallpapers/html/neon_html/neon_html_hd.jpg",
-		"downloads": [
-			"wallpapers/html/neon_html/neon_html_2K.jpg",
-			"wallpapers/html/neon_html/neon_html_1K.jpg",
-			"wallpapers/html/neon_html/neon_html_hd.jpg"
-		]
+		"src": "wallpapers/html/neon_html/neon_html"
 	}
 ]
