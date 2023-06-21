@@ -5,6 +5,7 @@ import { Names } from "./Tag.astro";
 
 <script>
     const wallpapers = [...document.querySelectorAll(".wallpaper")] as HTMLElement[];
+    const categories = [...document.querySelectorAll(".category")] as HTMLElement[]
     const filter = document.querySelector("#filter");
 
     filter?.addEventListener("click", (e) => {
@@ -19,6 +20,17 @@ import { Names } from "./Tag.astro";
             else {
                 select = "all";
             }
+
+            categories.forEach((category) => {
+                if(category == target){
+                    category.style.backgroundColor = "rgb(255,255,255)";
+                    category.style.color = "rgb(0,0,0)";
+                }
+                else{
+                    category.style.backgroundColor = "transparent";
+                    category.style.color = "rgb(255,255,255)";
+                }
+            })
 
             wallpapers.forEach((wallpaper) => {
                 const tags = wallpaper.dataset.tags?.split(",");
