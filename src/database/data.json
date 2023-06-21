@@ -1,37 +1,3 @@
 [
-	{
-		"title": "neon_speed",
-		"tags": ["tools","javascript","typescript","react","vue","svelte"],
-		"src": "wallpapers/tools/neon_speed/neon_speed"
-	},
-	{
-		"title": "now_power",
-		"tags": ["tools","javascript","node"],
-		"src": "wallpapers/tools/now_power/now_power"
-	},
-	{
-		"title": "type_world",
-		"tags": ["typescript","javascript"],
-		"src": "wallpapers/javascript/type_world/type_world"
-	},
-	{
-		"title": "relax_tailwind",
-		"tags": ["css","tools"],
-		"src": "wallpapers/tailwind/relax_tailwind/relax_tailwind"
-	},
-	{
-		"title": "dark_shapes",
-		"tags": ["javascript"],
-		"src": "wallpapers/javascript/dark_shapes/dark_shapes"
-	},
-	{
-		"title": "flat_vue",
-		"tags": ["vue"],
-		"src": "wallpapers/vue/flat_vue/flat_vue"
-	},
-	{
-		"title": "neon_html",
-		"tags": ["html"],
-		"src": "wallpapers/html/neon_html/neon_html"
-	}
+	
 ]
