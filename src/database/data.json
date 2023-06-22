@@ -5,6 +5,11 @@
         "folder" : "tools"
     },
     {
+        "title" : "react_puppet",
+        "tags" : ["react", "javascript"],
+        "folder" : "framework"
+    },
+    {
         "title" : "js_book",
         "tags" : ["javascript"],
         "folder" : "languages"
