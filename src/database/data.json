@@ -7,17 +7,17 @@
     {
         "title" : "pixel_java",
         "tags" : ["java"],
-        "folder" : "java"
+        "folder" : "languages"
     },
     {
         "title" : "type_world",
         "tags" : ["typescript","javascript"],
-        "folder" : "javascript"
+        "folder" : "languages"
     },
     {
         "title" : "js_shapes",
         "tags" : ["javascript"],
-        "folder" : "javascript"
+        "folder" : "languages"
     },
     {
         "title" : "vue_slice",
