@@ -5,6 +5,11 @@
         "folder" : "tools"
     },
     {
+        "title" : "js_book",
+        "tags" : ["javascript"],
+        "folder" : "languages"
+    },
+    {
         "title" : "flat_tailwind",
         "tags" : ["css"],
         "folder" : "framework"
