@@ -5,6 +5,11 @@
         "folder" : "tools"
     },
     {
+        "title" : "flat_tailwind",
+        "tags" : ["css"],
+        "folder" : "framework"
+    },
+    {
         "title" : "pixel_java",
         "tags" : ["java"],
         "folder" : "languages"
