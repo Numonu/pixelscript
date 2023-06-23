@@ -4,6 +4,11 @@
         "tags" : ["angular", "javascript"],
         "folder" : "framework"
     },
+    {
+        "title" : "js_block",
+        "tags" : ["javascript"],
+        "folder" : "languages"
+    },
 	{
         "title" : "vite_square",
         "tags" : ["tools","react","svelte","vue"],
