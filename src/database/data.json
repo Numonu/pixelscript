@@ -1,7 +1,12 @@
 [
+    {
+        "title" : "hands_angular",
+        "tags" : ["angular", "javascript"],
+        "folder" : "framework"
+    },
 	{
         "title" : "vite_square",
-        "tags" : ["tools","react","svelte","javascript","typescript"],
+        "tags" : ["tools","react","svelte","vue"],
         "folder" : "tools"
     },
     {
