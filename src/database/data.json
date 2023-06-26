@@ -1,5 +1,10 @@
 [
     {
+        "title" : "py_world",
+        "tags" : ["python"],
+        "folder" : "languages"
+    },
+    {
         "title" : "hands_angular",
         "tags" : ["angular", "javascript"],
         "folder" : "framework"
