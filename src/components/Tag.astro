@@ -11,7 +11,8 @@ export const enum Names {
     SVELTE = "svelte",
     JAVA = "java",
     ANGULAR = "angular",
-    PYTHON = "python"
+    PYTHON = "python",
+    ASTRO = "astro"
 }
 interface Props{name : Names}
 const {name} = Astro.props;
@@ -30,6 +31,7 @@ switch(name){
     case Names.SVELTE:style = "text-orange-400 border-orange-400";break;
     case Names.ANGULAR:style = "text-red-400 border-red-400";break;
     case Names.PYTHON:style = "text-blue-400 border-yellow-500";break;
+    case Names.ASTRO:style = "text-amber-500 border-neutral-50";break;
     default:style = "text-neutral-50 border-neutral-50";
 }
 ---
