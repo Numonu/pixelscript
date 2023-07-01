@@ -1,6 +1,11 @@
 
 [
     {
+        "title" : "docker_ocean",
+        "tags" : ["tools","docker"],
+        "folder" : "tools"
+    },
+    {
         "title" : "astro_glare",
         "tags" : ["astro"],
         "folder" : "framework"
