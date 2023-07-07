@@ -1,6 +1,11 @@
 
 [
     {
+        "title" : "py_standart",
+        "tags" : ["python"],
+        "folder" : "languages"
+    },
+    {
         "title" : "docker_ocean",
         "tags" : ["tools","docker"],
         "folder" : "tools"
